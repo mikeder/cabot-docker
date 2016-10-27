@@ -1,31 +1,66 @@
-# Hipchat integration
-HIPCHAT_ALERT_ROOM=__FIX_ME__
-HIPCHAT_API_KEY=__FIX_ME__
+# Plugins to be loaded at launch
+CABOT_PLUGINS_ENABLED=cabot_alert_hipchat==1.7.0,cabot_alert_twilio==1.1.4,cabot_alert_email==1.3.1,cabot_alert_slack==0.6
+DJANGO_SETTINGS_MODULE=cabot.settings
+LOG_FILE=/var/log/cabot
+PORT=5000
+## You shouldn't need to change anything above this line
+
+# Used for pointing links back in alerts etc.
+WWW_HTTP_HOST=__FIX_ME__
+WWW_SCHEME=http
 
 # Hostname of your Graphite server instance
 GRAPHITE_API=__FIX_ME__
 GRAPHITE_USER=__FIX_ME__
 GRAPHITE_PASS=__FIX_ME__
 
+# Slack integration
+SLACK_ALERT_CHANNEL=__FIX_ME__
+SLACK_WEBHOOK_URL=__FIX_ME__
+
+# Django admin email
+ADMIN_EMAIL=__FIX_ME__
+CABOT_FROM_EMAIL=__FIX_ME__
+
+# From parameter for the graphite request. If not defined, by default take -10 minutes
+# GRAPHITE_FROM=-10minute
+
+# Hipchat integration
+#HIPCHAT_ALERT_ROOM=__FIX_ME__
+#HIPCHAT_API_KEY=__FIX_ME__
+
 # URL of calendar to synchronise rota with
-CALENDAR_ICAL_URL=http://www.google.com/calendar/ical/example.ics
+#CALENDAR_ICAL_URL=http://www.google.com/calendar/ical/example.ics
+
+# User-Agent string used for HTTP checks
+HTTP_USER_AGENT=Cabot
+
+# Local time zone for this installation. Choices can be found here:
+# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
+TIME_ZONE=Etc/UTC
 
 # Mail Settings
-SES_HOST=__FIX_ME__
-SES_USER=__FIX_ME__
-SES_PASS=__FIX_ME__
-SES_PORT=__FIX_ME__
-CABOT_FROM_EMAIL=__FIX_ME__
+SES_HOST=smtp
+#SES_USER=__FIX_ME__
+#SES_PASS=__FIX_ME__
+#SES_PORT=__FIX_ME__
 # Default Mail-Backend is django_smtp_ssl.SSLEmailBackend
 # only uncomment if you want simple SMTP without encryption
-#SES_BACKEND=django.core.mail.backends.smtp.EmailBackend
+SES_BACKEND=django.core.mail.backends.smtp.EmailBackend
 
 # Jenkins integration
-JENKINS_API=_FIX_ME__
-JENKINS_USER=_FIX_ME__
-JENKINS_PASS=_FIX_ME__
+#JENKINS_API=_FIX_ME__
+#JENKINS_USER=_FIX_ME__
+#JENKINS_PASS=_FIX_ME__
 
 # Twilio integration for SMS and telephone alerts
-TWILIO_ACCOUNT_SID=_FIX_ME__
-TWILIO_AUTH_TOKEN=_FIX_ME__
-TWILIO_OUTGOING_NUMBER=_FIX_ME__
+#TWILIO_ACCOUNT_SID=_FIX_ME__
+#TWILIO_AUTH_TOKEN=_FIX_ME__
+#TWILIO_OUTGOING_NUMBER=_FIX_ME__
+
+# Use for LDAP authentication
+#AUTH_LDAP=true
+#AUTH_LDAP_SERVER_URI=ldap://ldap.example.com
+#AUTH_LDAP_BIND_DN="cn=Manager,dc=example,dc=com"
+#AUTH_LDAP_BIND_PASSWORD=""
+#AUTH_LDAP_USER_SEARCH="ou=People,dc=example,dc=com"
