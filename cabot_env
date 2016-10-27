@@ -9,6 +9,9 @@ PORT=5000
 WWW_HTTP_HOST=__FIX_ME__
 WWW_SCHEME=http
 
+# Base path to include before generated URLs.  If not defined, uses `/`
+URL_PREFIX=__FIX_ME__
+
 # Hostname of your Graphite server instance
 GRAPHITE_API=__FIX_ME__
 GRAPHITE_USER=__FIX_ME__
