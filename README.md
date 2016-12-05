@@ -21,7 +21,7 @@ Let's try
 
 - [Install](https://docs.docker.com/compose/install/) docker-compose.
 
-- Clone the repository (`git clone https://github.com/shoonoise/cabot-docker.git && cd cabot-docker`)
+- Clone the repository (`git clone https://github.com/mikeder/cabot-docker.git && cd cabot-docker`)
 
 - Modify docker-compose.yml, cabot_env and Cabot/nginx.conf to fit your needs
 
