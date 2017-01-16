@@ -35,10 +35,10 @@ Command `docker-compose ps` should return something like:
 cabotdocker_app_1             /bin/sh -c . /cabot/migrat ...   Up      0.0.0.0:5000->5000/tcp
 cabotdocker_celery_broker_1   /entrypoint.sh redis-server      Up      0.0.0.0:6379->6379/tcp
 cabotdocker_db_1              /usr/local/bin/run               Up      0.0.0.0:5432->5432/tcp
-cabotdocker_nginx_1           nginx -g daemon off;             Up      443/tcp, 80/tcp, 0.0.0.0:8080->8080/tcp
+cabotdocker_nginx_1           nginx -g daemon off;             Up      443/tcp, 80/tcp, 0.0.0.0:8000->8000/tcp
 ```
 
-Cabot web UI should be available at `http://_host_with_docker_:8080/`.
+Cabot web UI should be available at `http://_host_with_docker_:8000/`.
 
 > if you use `docker-machine`, command `docker-machine ip default` shows ip for `default` host.
 
